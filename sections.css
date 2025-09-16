@@ -503,9 +503,19 @@
 .accordion-button::after {
   background-image: url("images/20_253.svg");
   transform: none;
+  width: 32px !important;
+  height: 32px !important;
+  background-size: 32px 32px !important;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .accordion-button:not(.collapsed)::after {
   background-image: url("images/20_259.svg");
+  width: 32px !important;
+  height: 32px !important;
+  background-size: 32px 32px !important;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .accordion-body {
   padding: 0 40px 39px 40px;
