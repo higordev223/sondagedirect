@@ -1,3 +1,5 @@
+/* @fileoverview Global base styles, variables, resets, and minimal utilities layered over Bootstrap 5. */
+
 :root {
   --primary-color: #055b8c;
   --secondary-color: #f8c726;
@@ -11,28 +13,39 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background-light);
   color: var(--text-dark);
 }
 
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 64px;
-  box-sizing: border-box;
-}
+/* Use Bootstrap's .container; add a max-width override via utility if needed */
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
+/* Let Bootstrap style buttons; only keep icon size helpers */
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+.btn-icon-large {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bootstrap button overrides to match design (see screenshot.png) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -40,32 +53,40 @@ h1, h2, h3, h4, h5, h6, p {
   gap: 4px;
   padding: 11px 20px;
   border-radius: 400px;
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.25;
-  cursor: pointer;
-  transition: all 0.3s ease;
+}
+
+.btn-lg {
+  padding: 10px 28px;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
+  border-color: var(--primary-color);
   color: #fefcfd;
-  border: 1px solid var(--primary-color);
 }
 
-.btn-primary:hover {
-    background-color: #044a70;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #044a70;
+  border-color: #044a70;
+  color: #fefcfd;
 }
 
-.btn-secondary {
-  background-color: transparent;
+.btn-outline-primary {
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: transparent;
 }
 
-.btn-secondary:hover {
-    background-color: rgba(5, 91, 140, 0.1);
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: rgba(5, 91, 140, 0.1);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 @media (max-width: 1024px) {
