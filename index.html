@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sondage Direct</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600&family=DM+Sans:wght@700&family=Edu+NSW+ACT+Foundation:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <style id="sections-styles">
+      /* CSS for section section:header */
+      .site-header {
+        background-color: var(--background-light);
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+      }
+      .logo img {
+        height: 31px;
+        width: auto;
+      }
+      .main-nav {
+        display: flex;
+        gap: 32px;
+      }
+      .main-nav a {
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--text-dark);
+      }
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .btn-icon {
+        width: 16px;
+        height: 16px;
+      }
+      @media (max-width: 768px) {
+        .main-nav {
+          display: none;
+        }
+        .header-left {
+          gap: 20px;
+        }
+      }
+
+      /* CSS for section section:hero */
+      .hero-section {
+        padding: 126px 0;
+        text-align: center;
+      }
+      .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      .hero-title {
+        font-size: 72px;
+        font-weight: 600;
+        line-height: 1;
+        max-width: 960px;
+      }
+      .hero-subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--text-light);
+      }
+      .hero-cta {
+        margin-top: 2px; /* 26px gap - 24px from container gap */
+        display: flex;
+        gap: 12px;
+      }
+      .btn-large {
+        padding: 10px 28px;
+        gap: 4px;
+      }
+      .btn-icon-large {
+        width: 20px;
+        height: 20px;
+      }
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 80px 0;
+        }
+        .hero-title {
+          font-size: 48px;
+        }
+        .hero-subtitle {
+          font-size: 18px;
+        }
+        .hero-cta {
+          flex-direction: column;
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+
+      /* CSS for section section:steps */
+      .steps-section {
+        padding: 97px 0;
+      }
+      .steps-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 56px;
+      }
+      .steps-intro {
+        flex-basis: 55%;
+        max-width: 526px;
+      }
+      .steps-title {
+        font-size: 128px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--text-dark);
+      }
+      .steps-subtitle {
+        font-size: 24px;
+        line-height: 1.2;
+        color: var(--primary-color);
+        margin-top: 12px;
+      }
+      .steps-list-wrapper {
+        flex-basis: 45%;
+        max-width: 382px;
+        padding-top: 32px;
+        position: relative;
+      }
+      .steps-list-wrapper::before {
+        content: "";
+        position: absolute;
+        left: 22px;
+        top: 55px;
+        bottom: 55px;
+        width: 1px;
+        background-color: var(--primary-color);
+        transform: rotate(0.18deg); /* from figma */
+      }
+      .steps-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 82px;
+      }
+      .step-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .step-number {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--background-light);
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .step-1 {
+        background-color: var(--accent-orange);
+      }
+      .step-2 {
+        background-color: var(--primary-color);
+      }
+      .step-3 {
+        background-color: var(--accent-green);
+      }
+      .step-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 5px; /* Visual alignment */
+      }
+      .step-title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.55;
+      }
+      .step-description {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      @media (max-width: 1024px) {
+        .steps-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .steps-list-wrapper {
+          padding-top: 0;
+          width: 100%;
+          max-width: 500px;
+        }
+        .steps-list-wrapper::before {
+          display: none;
+        }
+        .steps-list {
+          gap: 40px;
+        }
+        .step-item {
+          align-items: center;
+        }
+        .step-content {
+          text-align: left;
+        }
+      }
+      @media (max-width: 768px) {
+        .steps-title {
+          font-size: 80px;
+        }
+        .steps-subtitle {
+          font-size: 20px;
+        }
+      }
+
+      /* CSS for section section:valuable-opinions */
+      .valuable-section {
+        padding: 87px 0 128px;
+        overflow: hidden;
+      }
+      .valuable-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+      .valuable-content {
+        flex: 1;
+        max-width: 646px;
+      }
+      .valuable-star {
+        width: 67px;
+        height: 67px;
+        background-color: var(--secondary-color);
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+        margin-bottom: 23px;
+      }
+      .valuable-title {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 1;
+        background: linear-gradient(
+          157deg,
+          #09090b 0%,
+          rgba(9, 9, 11, 0.8) 119.33%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 48px;
+      }
+      .valuable-description {
+        font-size: 20px;
+        line-height: 1.4;
+        color: var(--text-light);
+        max-width: 495px;
+      }
+      .valuable-description strong {
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+      .valuable-image-group {
+        flex: 1;
+        position: relative;
+        height: 799px;
+        min-width: 626px;
+      }
+      .valuable-bg-shape {
+        position: absolute;
+        width: 937px;
+        height: 755px;
+        left: -300px;
+        top: 108px;
+        z-index: 1;
+      }
+      .valuable-person {
+        position: absolute;
+        width: 626px;
+        left: 0;
+        top: 0;
+        z-index: 2;
+      }
+      .floating-card {
+        position: absolute;
+        background-color: var(--background-light);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+      }
+      .card-zalando {
+        width: 217px;
+        height: 67px;
+        border-radius: 8.5px;
+        padding: 14px;
+        left: 331px;
+        top: 417px;
+      }
+      .card-zalando img {
+        width: 188px;
+        height: 39px;
+      }
+      .card-google-play {
+        width: 92px;
+        height: 92px;
+        border-radius: 10.6px;
+        padding: 17px;
+        left: 239px;
+        top: 521px;
+      }
+      .card-google-play img {
+        width: 56px;
+        height: 56px;
+      }
+      .card-amazon {
+        width: 214px;
+        height: 84px;
+        border-radius: 14.8px;
+        padding: 24px;
+        left: -53px;
+        top: 479px;
+      }
+      .card-amazon img {
+        width: 164px;
+        height: 49px;
+      }
+      @media (max-width: 1200px) {
+        .valuable-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        .valuable-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .valuable-description {
+          max-width: 100%;
+        }
+        .valuable-image-group {
+          min-width: auto;
+          width: 100%;
+          height: auto;
+          margin-top: 40px;
+          transform: scale(0.8);
+          transform-origin: top center;
+        }
+      }
+      @media (max-width: 768px) {
+        .valuable-section {
+          padding: 60px 0;
+        }
+        .valuable-title {
+          font-size: 42px;
+        }
+        .valuable-description {
+          font-size: 18px;
+        }
+        .valuable-image-group {
+          transform: scale(0.6);
+          margin-top: -100px;
+          margin-bottom: -150px;
+        }
+      }
+
+      /* CSS for section section:rewards */
+      .rewards-section {
+        background-image: url("images/1755a661067a3457236e30092382b0938de60ac1.png");
+        background-size: cover;
+        background-position: center;
+        padding: 119px 0;
+        color: var(--background-light);
+      }
+      .rewards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 79px;
+      }
+      .rewards-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        max-width: 1136px;
+      }
+      .rewards-title {
+        font-family: "DM Sans", sans-serif;
+        font-size: 96px;
+        font-weight: 700;
+        color: var(--secondary-color);
+        line-height: 0.3; /* Adjusted for visual alignment */
+      }
+      .rewards-subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+      .rewards-brands {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 39px;
+      }
+      .brands-title {
+        font-family: "DM Sans", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.27;
+      }
+      .brands-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 24px;
+        width: 100%;
+      }
+      .brands-grid img {
+        width: 100%;
+        height: auto;
+        border: 5px solid var(--background-light);
+        border-radius: 9px;
+        box-sizing: border-box;
+      }
+      @media (max-width: 1024px) {
+        .brands-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .rewards-section {
+          padding: 80px 0;
+        }
+        .rewards-title {
+          font-size: 64px;
+        }
+        .rewards-subtitle {
+          font-size: 18px;
+        }
+        .brands-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* CSS for section section:faq */
+      .faq-section {
+        padding: 135px 0 131px;
+      }
+      .faq-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 116px;
+      }
+      .faq-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .faq-tag {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+      .faq-title {
+        font-size: 32px;
+        font-weight: 600;
+        color: #000000;
+      }
+      .faq-list {
+        width: 100%;
+        max-width: 1027px;
+        display: flex;
+        flex-direction: column;
+      }
+      .faq-item {
+        border-bottom: 2px solid #f2efef;
+      }
+      .faq-item:first-child {
+        border-top: 2px solid #f2efef;
+      }
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 39px 40px;
+        cursor: pointer;
+      }
+      .faq-question span {
+        font-family: "Sora", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000000;
+      }
+      .faq-question img {
+        width: 32px;
+        height: 32px;
+      }
+      @media (max-width: 768px) {
+        .faq-section {
+          padding: 80px 0;
+        }
+        .faq-container {
+          gap: 60px;
+        }
+        .faq-question {
+          padding: 20px;
+        }
+      }
+
+      /* CSS for section section:footer */
+      .site-footer {
+        background-color: var(--background-grey);
+        padding: 33px 0;
+      }
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .copyright {
+        font-size: 15px;
+        color: var(--text-dark);
+      }
+      .footer-links {
+        font-size: 15px;
+        color: var(--primary-color);
+      }
+      .footer-links a {
+        color: var(--primary-color);
+      }
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+    <script src="global.js" defer></script>
+  </head>
+  <body>
+    <header id="section-header" class="site-header">
+      <div class="container header-container">
+        <div class="header-left">
+          <a href="#" class="logo">
+            <img
+              src="images/3543bf97c94098d852b12a5df3cbdf3c7d0040ca.png"
+              alt="Sondage Direct Logo"
+            />
+          </a>
+          <nav class="main-nav">
+            <a href="#section-rewards">Rewards</a>
+            <a href="#">Surveys</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <a href="#" class="btn btn-primary">
+            <img src="images/I4_99_4_465.svg" alt="" class="btn-icon" />
+            Sign in
+          </a>
+          <a href="#" class="btn btn-secondary">
+            <img src="images/I4_99_4_490.svg" alt="" class="btn-icon" />
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </header>
+    <section id="section-hero" class="hero-section">
+      <div class="container hero-container">
+        <h1 class="hero-title">Share your opinion and win rewards</h1>
+        <p class="hero-subtitle">Quick and easy registration</p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary btn-large">
+            <img src="images/5_230.svg" alt="" class="btn-icon-large" />
+            Sign in
+          </a>
+          <a href="#" class="btn btn-secondary btn-large">
+            <img src="images/5_233.svg" alt="" class="btn-icon-large" />
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="section-steps" class="steps-section">
+      <div class="container steps-container">
+        <div class="steps-intro">
+          <h2 class="steps-title">3 STEPS</h2>
+          <p class="steps-subtitle">
+            No hidden costs, no complications — just sign up, share your
+            opinion, and get rewarded.
+          </p>
+        </div>
+        <div class="steps-list-wrapper">
+          <ol class="steps-list">
+            <li class="step-item">
+              <div class="step-number step-1">1</div>
+              <div class="step-content">
+                <h3 class="step-title">Sign up for free</h3>
+                <p class="step-description">
+                  Create your free account and start enjoying all the benefits.
+                </p>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-number step-2">2</div>
+              <div class="step-content">
+                <h3 class="step-title">Take the surveys</h3>
+                <p class="step-description">
+                  Join quick surveys and share your opinion.
+                </p>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-number step-3">3</div>
+              <div class="step-content">
+                <h3 class="step-title">Receive rewards</h3>
+                <p class="step-description">
+                  Earn exclusive rewards for completing surveys.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section id="section-valuable-opinions" class="valuable-section">
+      <div class="container valuable-container">
+        <div class="valuable-content">
+          <div class="valuable-star"></div>
+          <h2 class="valuable-title">Your opinions are valuable!</h2>
+          <p class="valuable-description">
+            <strong
+              >We value your opinion and the time you spend with us</strong
+            >
+            <br /><br />
+            You will be able to exchange your survey points for rewards and
+            vouchers -
+            <strong>PayPal, Amazon, Google Play, Zalando, and others.</strong>
+          </p>
+        </div>
+        <div class="valuable-image-group">
+          <!--merged image-->
+          <img
+            src="images/a68c1e23df84b8d9e87a597898fab8f3c3d8e9f3.png"
+            alt="Excited woman pointing at smartphone"
+            class="valuable-person"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="section-rewards" class="rewards-section">
+      <div class="container rewards-container">
+        <div class="rewards-header">
+          <h2 class="rewards-title">Rewards</h2>
+          <p class="rewards-subtitle">
+            For each successfully completed survey you will earn survey points.
+            You will be able to exchange these points for rewards. Click below
+            to see a list of all possible rewards.
+          </p>
+        </div>
+        <div class="rewards-brands">
+          <h3 class="brands-title">
+            Trusted by the best companies around the world
+          </h3>
+          <div class="brands-grid">
+            <img
+              src="images/dc0c4f2f226d89c966fc8f55a462b918553b1a74.png"
+              alt="Uber Eats Gift Card"
+            />
+            <img
+              src="images/31deba06164fdc9d464289fa9271f7a5b3dadd25.png"
+              alt="Zalando Gift Card"
+            />
+            <img
+              src="images/df635691a8ed722a2eba21c2bd3a7fdd52951821.png"
+              alt="Adidas Gift Card"
+            />
+            <img
+              src="images/d8855646b30fffb3e76c6b607cff5ecbea5bbe7f.png"
+              alt="PayPal Gift Card"
+            />
+            <img
+              src="images/8b5d9cb0a3db03461af14f3b6a1a618757af5d3c.png"
+              alt="Visa Virtual Card"
+            />
+            <img
+              src="images/41abd4213316f78a5545ad83a2eb88dd6ac5c1e2.png"
+              alt="Google Play Redeem Code"
+            />
+            <img
+              src="images/e7596612db79c55a1ed9c04fc191a7f1d85eb7d8.png"
+              alt="H&M Gift Card"
+            />
+            <img
+              src="images/1b1d3bb82194961d3779b825d03188dd7a02f54e.png"
+              alt="IKEA Gift Card"
+            />
+            <img
+              src="images/64c5a90282c9cdf83d0aceadac73815035dc13ff.png"
+              alt="Deliveroo Gift Card"
+            />
+            <img
+              src="images/c655fd9ade6ab8df76f5e715de9e64913be15b75.png"
+              alt="Nike Gift Card"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section-faq" class="faq-section">
+      <div class="container faq-container">
+        <div class="faq-header">
+          <p class="faq-tag">Principal</p>
+          <h2 class="faq-title">Questions and Answers</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Does it really work?</span>
+              <img src="images/20_253.svg" alt="chevron down" />
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What do I have to do to start earning rewards?</span>
+              <img src="images/20_259.svg" alt="chevron down" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="section-footer" class="site-footer">
+      <div class="container footer-container">
+        <p class="copyright">
+          ©2025 Sondage Direct. Sondage Direct is a brand by Main Frame Ltd
+        </p>
+        <div class="footer-links">
+          <a href="#">Terms and conditions</a> - <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
