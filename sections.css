@@ -64,13 +64,14 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 56px;
+  max-width: 960px;
 }
 .steps-intro {
   flex-basis: 55%;
   max-width: 526px;
 }
 .steps-title {
-  font-size: 128px;
+  font-size: 110px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-dark);
@@ -91,8 +92,8 @@
   content: "";
   position: absolute;
   left: 22px;
-  top: 55px;
-  bottom: 55px;
+  top: 77px;
+  bottom: 88px;
   width: 1px;
   background-color: var(--primary-color);
   transform: rotate(0.18deg); /* from figma */
@@ -128,6 +129,7 @@
 }
 .step-2 {
   background-color: var(--primary-color);
+  z-index: 10;
 }
 .step-3 {
   background-color: var(--accent-green);
@@ -183,7 +185,7 @@
 
 /* CSS for section section:valuable-opinions */
 .valuable-section {
-  padding: 87px 0 128px;
+  padding: 47px 0 128px;
   overflow: hidden;
 }
 .valuable-container {
@@ -236,7 +238,7 @@
 .valuable-image-group {
   flex: 1;
   position: relative;
-  height: 799px;
+  height: 302px;
   min-width: 626px;
 }
 .valuable-bg-shape {
@@ -303,9 +305,13 @@
 }
 
 @media (max-width: 1200px) {
+  .valuable-section {
+    padding-bottom: 0;
+  }
   .valuable-container {
     flex-direction: column;
     text-align: center;
+    gap: 0;
   }
   .valuable-content {
     display: flex;
@@ -319,14 +325,28 @@
     min-width: auto;
     width: 100%;
     height: auto;
-    margin-top: 40px;
-    transform: scale(0.8);
-    transform-origin: top center;
+    /* Remove transform so layout height matches visual height */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .valuable-person-mobile {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    display: block;
+    margin: 0 auto;
+    /* Reduce actual image height responsively */
+    width: clamp(260px, 80vw, 520px);
+    height: auto;
   }
 }
 @media (max-width: 768px) {
   .valuable-section {
-    padding: 60px 0;
+    padding: 60px 0 0;
   }
   .valuable-title {
     font-size: 42px;
@@ -335,9 +355,17 @@
     font-size: 18px;
   }
   .valuable-image-group {
-    transform: scale(0.6);
-    margin-top: -100px;
-    margin-bottom: -150px;
+    margin-bottom: 0;
+  }
+  .valuable-person-mobile {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    display: block;
+    margin: 0 auto;
+    width: clamp(220px, 80vw, 520px);
+    height: auto;
   }
 }
 
