@@ -9,6 +9,14 @@
   --background-grey: #f8fafc;
   --accent-orange: #b66f1f;
   --accent-green: #1cac70;
+  /* Aliases for sub-pages */
+  --primary-blue: var(--primary-color);
+  --text-white: #ffffff;
+  --bg-light: var(--background-light);
+  --bg-light-gray: var(--background-grey);
+  --bg-footer: var(--background-grey);
+  --divider-color: #e5e5e5;
+  --link-color: var(--primary-color);
 }
 
 body {
@@ -18,7 +26,22 @@ body {
   color: var(--text-dark);
 }
 
+/* Global box-sizing reset used by sub-pages */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Use Bootstrap's .container; add a max-width override via utility if needed */
+
+.page-wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--background-light);
+  overflow: hidden;
+}
 
 a {
   text-decoration: none;
@@ -53,7 +76,7 @@ p {
   gap: 4px;
   padding: 11px 20px;
   border-radius: 400px;
-  font-family: "Sora", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.25;

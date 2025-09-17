@@ -1,6 +1,28 @@
 /* @fileoverview Section-specific styles for header, hero, steps, valuable opinions, rewards, FAQ, and footer. */
 
-/* CSS for section section:header (trimmed: Bootstrap navbar used) */
+/* CSS for section section:header */
+.site-header {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  height: 88px;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-brand {
+  margin-right: 40px;
+}
+
+.navbar-nav .nav-link {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn {
+  font-family: "Inter", sans-serif;
+}
 
 /* CSS for section section:hero */
 .hero-section {
@@ -119,7 +141,7 @@
   justify-content: center;
   align-items: center;
   color: var(--background-light);
-  font-family: "Sora", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 20px;
   flex-shrink: 0;
@@ -392,7 +414,7 @@
   max-width: 1136px;
 }
 .rewards-title {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 96px;
   font-weight: 700;
   color: var(--secondary-color);
@@ -411,7 +433,7 @@
   gap: 39px;
 }
 .brands-title {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.27;
@@ -490,7 +512,7 @@
   padding: 39px 40px;
   background-color: transparent;
   box-shadow: none;
-  font-family: "Sora", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #000000;
@@ -541,6 +563,18 @@
   background-color: var(--background-grey);
   padding: 33px 0;
 }
+
+/* Divider styling */
+.divider {
+  margin-top: 32px;
+  border: none;
+  height: 1px;
+  background-color: var(--divider-color);
+  opacity: 1;
+}
+article:not(:first-child) {
+  margin-top: 32px;
+}
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -563,5 +597,404 @@
   .footer-container {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* =============================================
+   Page-specific styles: Privacy Policy (privacy_police.html)
+   Prefixed with .privacy-page to avoid collisions
+   ============================================= */
+.privacy-page .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.privacy-page .header-left {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.privacy-page .logo img {
+  display: block;
+  height: 31px;
+  width: auto;
+}
+.privacy-page .main-nav ul {
+  display: flex;
+  gap: 32px;
+}
+.privacy-page .main-nav a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+.privacy-page .header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.privacy-page .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 20px;
+  border-radius: 400px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  height: 40px;
+  white-space: nowrap;
+}
+.privacy-page .btn img {
+  width: 16px;
+  height: 16px;
+}
+.privacy-page .btn-secondary {
+  background-color: transparent;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+}
+
+@media (max-width: 768px) {
+  .privacy-page .site-header {
+    padding: 24px;
+  }
+  .privacy-page .header-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .privacy-page .header-left {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.privacy-page .hero-section {
+  background-color: var(--primary-blue);
+  color: var(--text-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+.privacy-page .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.privacy-page .hero-subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 6.48px;
+  text-transform: uppercase;
+  color: white;
+}
+.privacy-page .hero-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.45;
+  color: white;
+}
+@media (max-width: 768px) {
+  .privacy-page .hero-title {
+    font-size: 36px;
+  }
+  .privacy-page .hero-subtitle {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+}
+
+.privacy-page .privacy-policy-section {
+  padding: 64px 0;
+}
+.privacy-page .privacy-container {
+  max-width: 1256px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.privacy-page .privacy-article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.privacy-page .article-subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+.privacy-page .article-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+.privacy-page .article-text,
+.privacy-page .article-list li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+.privacy-page .article-text strong {
+  font-weight: 700;
+}
+.privacy-page .article-list {
+  list-style: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.privacy-page .article-list ol {
+  list-style: decimal;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.privacy-page .article-list ol li {
+  margin-bottom: 8px;
+}
+
+/* Override for ordered lists with article-list class */
+.privacy-page ol.article-list {
+  list-style: decimal;
+  padding-left: 20px;
+  margin: 0;
+  display: block;
+}
+
+.privacy-page ol.article-list li {
+  margin-bottom: 8px;
+  display: list-item;
+}
+.privacy-page .text-link {
+  color: var(--primary-blue);
+}
+@media (max-width: 768px) {
+  .privacy-page .privacy-policy-section {
+    padding: 32px 0;
+  }
+  .privacy-page .privacy-container {
+    gap: 24px;
+  }
+}
+/* =============================================
+   Page-specific styles: Terms & Conditions (terms_conditions.html)
+   Prefixed with .terms-page to avoid collisions
+   ============================================= */
+.terms-page .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.terms-page .header-left {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.terms-page .logo img {
+  display: block;
+  height: 31px;
+  width: auto;
+}
+.terms-page .main-nav {
+  display: flex;
+  gap: 32px;
+}
+.terms-page .main-nav a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+.terms-page .header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.terms-page .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 20px;
+  border-radius: 400px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  height: 40px;
+  white-space: nowrap;
+}
+.terms-page .btn img {
+  width: 16px;
+  height: 16px;
+}
+.terms-page .btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+@media (max-width: 992px) {
+  .terms-page .site-header {
+    padding: 24px 32px;
+  }
+  .terms-page .header-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .terms-page .header-left {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .terms-page .header-right {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.terms-page .hero-banner {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 220px;
+}
+.terms-page .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.terms-page .hero-subtitle {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 6.48px;
+  text-transform: uppercase;
+  color: white;
+}
+.terms-page .hero-title {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.45;
+  color: white;
+}
+@media (max-width: 768px) {
+  .terms-page .hero-title {
+    font-size: 36px;
+  }
+  .terms-page .hero-subtitle {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+  .terms-page .hero-banner {
+    padding: 40px 20px;
+  }
+}
+
+.terms-page .main-content {
+  padding: 64px 0;
+}
+.terms-page .content-container {
+  max-width: 1256px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.terms-page .content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.terms-page .content-intro-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+.terms-page .content-heading {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+.terms-page .content-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+.terms-page .content-text strong {
+  font-weight: 700;
+}
+.terms-page .content-link {
+  color: var(--link-color);
+}
+.terms-page .content-link:hover {
+  text-decoration: underline;
+}
+
+.terms-page .content-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.terms-page .content-list li {
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+
+.terms-page .content-list ul {
+  list-style: circle;
+  padding-left: 20px;
+  margin: 8px 0;
+}
+@media (max-width: 768px) {
+  .terms-page .main-content {
+    padding: 32px 0;
+  }
+  .terms-page .content-container {
+    gap: 24px;
+    padding: 0 20px;
+  }
+  .terms-page .content-heading {
+    font-size: 18px;
   }
 }
