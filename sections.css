@@ -998,3 +998,677 @@ article:not(:first-child) {
     font-size: 18px;
   }
 }
+
+/* =============================================
+   Reset Password Page Styles (reset_psw.html)
+   ============================================= */
+.reset-password-section {
+  padding: 0;
+}
+
+.reset-password-row {
+  min-height: calc(100vh - 176.5px);
+}
+
+.reset-password-content {
+  max-width: 423px;
+  width: 100%;
+}
+
+.reset-password-title {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.reset-password-subtitle {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.reset-password-form .form-control {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.reset-password-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(5, 91, 140, 0.25);
+}
+
+.reset-password-form .form-label {
+  color: #333333;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.reset-password-form .btn {
+  border-radius: 7px;
+  height: 48px;
+}
+
+.reset-password-links a {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.reset-password-links a:hover {
+  text-decoration: underline;
+}
+
+.reset-password-image {
+  width: 100%;
+  height: 100%;
+  max-height: 754px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.reset-password-image-wrapper {
+  padding: 2rem;
+}
+
+/* Additional styles from inline CSS */
+.form-container {
+  width: 100%;
+  max-width: 423px;
+  background-color: transparent;
+}
+
+.reset-password-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm-password-group {
+  margin-bottom: 32px;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.form-header h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.73px;
+  color: #055b8c;
+  margin: 0;
+}
+
+.form-header p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: #333333;
+  margin: 0;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #333333;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.form-group input::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #055b8c;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  height: 48px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #044a70;
+}
+
+@media (max-width: 992px) {
+  .reset-password-image-wrapper {
+    order: -1;
+    padding: 1rem;
+  }
+  .reset-password-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reset-password-image-wrapper {
+    padding: 0.5rem;
+  }
+  .reset-password-content {
+    padding: 0.5rem;
+  }
+  .reset-password-title {
+    font-size: 28px;
+  }
+}
+
+/* =============================================
+   Change Password Page Styles (change_psw.html)
+   ============================================= */
+.change-password-section {
+  padding: 0;
+}
+
+.change-password-row {
+  min-height: calc(100vh - 176.5px);
+}
+
+.change-password-content {
+  max-width: 423px;
+  width: 100%;
+}
+
+.change-password-title {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.change-password-subtitle {
+  color: #333333;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.change-password-image {
+  max-width: 292px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 32px;
+  border-radius: 12px;
+}
+
+.change-password-actions a {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+.change-password-actions .btn {
+  border-radius: 7px;
+  height: 48px;
+}
+.change-password-bg-image {
+  width: 100%;
+  height: 100%;
+  max-height: 754px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.change-password-image-wrapper {
+  padding: 2rem;
+}
+
+@media (max-width: 992px) {
+  .change-password-image-wrapper {
+    order: -1;
+    padding: 1rem;
+  }
+  .change-password-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .change-password-image-wrapper {
+    padding: 0.5rem;
+  }
+  .change-password-content {
+    padding: 0.5rem;
+  }
+  .change-password-title {
+    font-size: 28px;
+  }
+  .change-password-image {
+    max-width: 150px;
+  }
+}
+
+/* =============================================
+   Forgot Password Page Styles (forgot_psw.html)
+   ============================================= */
+body.forgot-password-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.forgot-password-section {
+  padding: 0;
+}
+
+.forgot-password-row {
+  min-height: calc(100vh - 176.5px);
+}
+
+.forgot-password-content {
+  max-width: 423px;
+  width: 100%;
+}
+
+.forgot-password-title {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.forgot-password-subtitle {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.forgot-password-form .form-control {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.forgot-password-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(5, 91, 140, 0.25);
+}
+
+.forgot-password-form .btn {
+  border-radius: 7px;
+  height: 48px;
+}
+
+.forgot-password-form .form-label {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.forgot-password-links a {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-password-links a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-image {
+  width: 100%;
+  height: 100%;
+  max-height: 754px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.forgot-password-image-wrapper {
+  padding: 2rem;
+}
+
+@media (max-width: 992px) {
+  .forgot-password-image-wrapper {
+    order: -1;
+    padding: 1rem;
+  }
+  .forgot-password-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .forgot-password-image-wrapper {
+    padding: 0.5rem;
+  }
+  .forgot-password-content {
+    padding: 0.5rem;
+  }
+  .forgot-password-title {
+    font-size: 28px;
+  }
+}
+
+/* =============================================
+   Signup Page Styles (signup.html)
+   ============================================= */
+.signup-section {
+  padding: 0;
+}
+
+.signup-row {
+  min-height: calc(100vh - 176.5px);
+}
+
+.signup-content {
+  max-width: 532px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.signup-title {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.signup-subtitle {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.signup-form .form-control {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.signup-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(5, 91, 140, 0.25);
+}
+
+.signup-form .form-control::placeholder {
+  color: #b3b3b3;
+}
+
+.signup-form .form-label {
+  color: #333333;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.signup-form .form-select {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #b3b3b3;
+}
+.signup-form .form-select option:not(:disabled) {
+  color: #333333;
+}
+
+.signup-form .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(5, 91, 140, 0.25);
+}
+
+.signup-form .btn {
+  border-radius: 7px;
+  height: 48px;
+}
+
+.signup-checkboxes .form-check-label {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.signup-checkboxes .form-check-label a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.signup-checkboxes .form-check-label a:hover {
+  text-decoration: underline;
+}
+
+.signup-links a {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.signup-links a:hover {
+  text-decoration: underline;
+}
+
+.signup-image {
+  width: 100%;
+  height: 100%;
+  min-height: 684px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.signup-image-wrapper {
+  padding: 2rem;
+}
+
+@media (max-width: 992px) {
+  .signup-image-wrapper {
+    order: -1;
+    padding: 1rem;
+  }
+  .signup-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-image-wrapper {
+    padding: 0.5rem;
+  }
+  .signup-content {
+    padding: 0.5rem;
+  }
+  .signup-title {
+    font-size: 28px;
+  }
+}
+
+/* =============================================
+   Login Page Styles (login.html)
+   ============================================= */
+body.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.login-section {
+  padding: 0;
+}
+
+.login-row {
+  min-height: calc(100vh - 176.5px);
+}
+
+.login-content {
+  max-width: 423px;
+  width: 100%;
+}
+
+.login-title {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.login-form .form-control {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.login-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(5, 91, 140, 0.25);
+}
+
+.login-form .btn {
+  border-radius: 7px;
+  height: 48px;
+}
+
+.login-form .form-label {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.login-links a {
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  max-height: 754px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.login-image-wrapper {
+  padding: 2rem;
+}
+
+@media (max-width: 992px) {
+  .login-image-wrapper {
+    order: -1;
+    padding: 1rem;
+  }
+
+  .login-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-image-wrapper {
+    padding: 0.5rem;
+  }
+
+  .login-content {
+    padding: 0.5rem;
+  }
+
+  .login-title {
+    font-size: 28px;
+  }
+}

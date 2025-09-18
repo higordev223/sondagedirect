@@ -17,6 +17,12 @@
   --bg-footer: var(--background-grey);
   --divider-color: #e5e5e5;
   --link-color: var(--primary-color);
+  /* Additional variables for signup page */
+  --text-color-light: #f0f0f0;
+  --placeholder-color: #b3b3b3;
+  --background-color: #111111;
+  --input-border-color: #d9d9d9;
+  --white: #ffffff;
 }
 
 body {
