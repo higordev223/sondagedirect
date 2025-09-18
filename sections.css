@@ -45,7 +45,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
-  color: var(--text-light);
+  color: #71717a;
 }
 .hero-cta {
   margin-top: 2px; /* 26px gap - 24px from container gap */
@@ -250,7 +250,7 @@
 .valuable-description {
   font-size: 20px;
   line-height: 1.4;
-  color: var(--text-light);
+  color: #71717a;
   max-width: 495px;
 }
 .valuable-description strong {
@@ -1025,7 +1025,7 @@ article:not(:first-child) {
 }
 
 .reset-password-subtitle {
-  color: var(--text-light);
+  color: #333333;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1332,7 +1332,7 @@ body.forgot-password-page {
 }
 
 .forgot-password-subtitle {
-  color: var(--text-light);
+  color: #333333;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1359,7 +1359,7 @@ body.forgot-password-page {
 }
 
 .forgot-password-form .form-label {
-  color: var(--text-light);
+  color: #333333;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1439,7 +1439,7 @@ body.forgot-password-page {
 }
 
 .signup-subtitle {
-  color: var(--text-light);
+  color: #333333;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1478,8 +1478,9 @@ body.forgot-password-page {
   border: 1px solid #e5e5e5;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  color: #b3b3b3;
+  color: #333333;
 }
+
 .signup-form .form-select option:not(:disabled) {
   color: #333333;
 }
@@ -1495,7 +1496,7 @@ body.forgot-password-page {
 }
 
 .signup-checkboxes .form-check-label {
-  color: var(--text-light);
+  color: #333333;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -1590,7 +1591,7 @@ body.login-page {
 }
 
 .login-subtitle {
-  color: var(--text-light);
+  color: #333333;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1617,7 +1618,7 @@ body.login-page {
 }
 
 .login-form .form-label {
-  color: var(--text-light);
+  color: #333333;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1711,6 +1712,10 @@ body.login-page {
   flex-direction: column;
 }
 
+.survey-page .account-header {
+  margin-bottom: 42px;
+}
+
 .survey-page .account-title,
 .survey-page .account-balance {
   font-family: "Sora", sans-serif;
@@ -1757,12 +1762,14 @@ body.login-page {
 
 /* Personal info card save button styling */
 .personal-info-card .card-body {
-  padding: 32px;
+  padding: 32px 32px 72px;
 }
 .survey-page .personal-info-card .btn {
   height: 40px;
   width: 149px;
   border-radius: 6px;
+  position: absolute;
+  bottom: 32px;
 }
 
 .survey-page .redeem-banner {
@@ -1790,7 +1797,6 @@ body.login-page {
 .survey-page .redeem-arrow {
   width: 16px;
   height: 16px;
-  transform: rotate(-90deg);
 }
 
 /* Tab styling for surveys card */
@@ -1896,6 +1902,106 @@ body.login-page {
 
 .survey-page .survey-history-item .survey-points {
   color: #058c7f;
+}
+
+/* Exchanges table styling */
+.survey-page .exchanges-table-container {
+  background-color: white;
+  border: 1px solid #dfe3e8;
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Mobile responsive table scrolling */
+@media (max-width: 768px) {
+  .survey-page .exchanges-table-container {
+    max-height: 250px;
+    overflow-x: auto;
+    overflow-y: auto;
+    margin: 0 -10px; /* Extend to card edges on mobile */
+  }
+
+  .survey-page .exchanges-table {
+    min-width: 500px; /* Ensure table doesn't get too compressed */
+  }
+
+  .survey-page .exchanges-table th,
+  .survey-page .exchanges-table td {
+    padding: 8px 12px; /* Reduce padding on mobile */
+    font-size: 13px; /* Slightly smaller font on mobile */
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .survey-page .exchanges-table-container {
+    max-height: 200px;
+  }
+
+  .survey-page .exchanges-table {
+    min-width: 450px;
+  }
+
+  .survey-page .exchanges-table th,
+  .survey-page .exchanges-table td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+.survey-page .exchanges-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+}
+
+.survey-page .exchanges-table thead {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.survey-page .exchanges-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  color: #83929e;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.survey-page .exchanges-table td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #395164;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.survey-page .exchanges-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.survey-page .exchanges-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Custom scrollbar for exchanges table */
+.survey-page .exchanges-table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.survey-page .exchanges-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.survey-page .exchanges-table-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.survey-page .exchanges-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 /* Survey page footer styles */
