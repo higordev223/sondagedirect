@@ -1672,3 +1672,250 @@ body.login-page {
     font-size: 28px;
   }
 }
+
+/* =============================================
+   Survey Page Styles (survey.html)
+   ============================================= */
+
+/* Survey page header styles */
+.survey-page .site-header {
+  background-color: var(--bg-light);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.survey-page .logo-img {
+  width: 136px;
+  height: auto;
+}
+
+.survey-page .account-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.survey-page .dropdown-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+/* Survey page account section styles */
+.survey-page .account-section {
+  min-height: calc(
+    100vh - 88px - 88.5px
+  ); /* 100vh minus header (~88px) and footer (~66px) */
+  padding-top: 37px;
+  padding-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+}
+
+.survey-page .account-title,
+.survey-page .account-balance {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.survey-page .account-balance .points {
+  color: var(--primary-color);
+}
+
+.survey-page .info-card {
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+}
+
+.survey-page .card-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+/* Form control styling for personal info card */
+.survey-page .personal-info-card .form-control,
+.survey-page .personal-info-card .form-select {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--text-dark-secondary);
+  height: 40px;
+}
+
+.survey-page .personal-info-card .form-control:focus,
+.survey-page .personal-info-card .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(5, 91, 140, 0.25);
+}
+
+/* Personal info card save button styling */
+.personal-info-card .card-body {
+  padding: 32px;
+}
+.survey-page .personal-info-card .btn {
+  height: 40px;
+  width: 149px;
+  border-radius: 6px;
+}
+
+.survey-page .redeem-banner {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-radius: 7px;
+  border: none;
+  height: 52px;
+  margin-bottom: 32px;
+}
+
+.survey-page .star-icon-wrapper {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.survey-page .star-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.survey-page .redeem-arrow {
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg);
+}
+
+/* Tab styling for surveys card */
+.surveys-card .card-body {
+  padding: 22px 32px;
+}
+.survey-page .surveys-card .nav-pills {
+  margin-bottom: 32px;
+}
+.survey-page .surveys-card .nav-pills .nav-link {
+  background-color: white;
+  color: #333333;
+  height: 48px;
+}
+
+.survey-page .surveys-card .nav-pills .nav-link.active {
+  background-color: #ebf5fa;
+  color: var(--primary-color);
+}
+
+.survey-page .survey-list-container {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 10px;
+  max-height: calc(
+    5 * 60px + 4 * 20px
+  ); /* Show 5 items with 60px height + 4 gaps of 20px */
+}
+
+.survey-page .survey-list-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.survey-page .survey-list-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.survey-page .survey-list-container::-webkit-scrollbar-thumb {
+  background-color: var(--border-light);
+  border-radius: 400px;
+}
+
+.survey-page .survey-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.survey-page .survey-item {
+  background-color: var(--bg-accent-lighter);
+  border: 1px solid var(--border-accent);
+  border-radius: 6px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  min-height: 60px;
+}
+
+.survey-page .survey-item:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.survey-page .survey-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.survey-page .survey-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.survey-page .survey-points {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--primary-color);
+}
+
+.survey-page .survey-access {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.survey-page .survey-access img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Survey history item styling */
+.survey-page .survey-history-item {
+  justify-content: flex-start;
+}
+
+.survey-page .survey-history-item .survey-points {
+  color: #058c7f;
+}
+
+/* Survey page footer styles */
+.survey-page .site-footer {
+  background-color: var(--bg-off-white);
+  padding: 33px 0;
+}
+
+.survey-page .footer-links a {
+  color: var(--primary-color);
+}
+
+.no-surveys-content {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.no-surveys-title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}

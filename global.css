@@ -23,6 +23,15 @@
   --background-color: #111111;
   --input-border-color: #d9d9d9;
   --white: #ffffff;
+  /* Additional variables from survey.css */
+  --text-dark-secondary: #1e1e1e;
+  --text-light: #ffffff;
+  --border-light: #e5e5e5;
+  --border-medium: #d9d9d9;
+  --border-accent: #cee9f8;
+  --bg-off-white: #f8fafc;
+  --bg-accent-light: #ebf5fa;
+  --bg-accent-lighter: #fafdff;
 }
 
 body {
@@ -128,4 +137,23 @@ p {
   .container {
     padding: 0 20px;
   }
+}
+
+/* Custom container class from survey.css */
+.container.custom {
+  width: 100%;
+  max-width: 1312px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Button reset styles from survey.css */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
 }
