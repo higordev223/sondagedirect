@@ -32,6 +32,18 @@
   --bg-off-white: #f8fafc;
   --bg-accent-light: #ebf5fa;
   --bg-accent-lighter: #fafdff;
+  /* Additional variables from rewards-global.css */
+  --color-primary: #055b8c;
+  --color-text-primary: #333333;
+  --color-text-secondary: #71717a;
+  --color-text-tertiary: #83929e;
+  --color-text-on-primary: #fefcfd;
+  --color-text-table-data: #395164;
+  --color-white: #ffffff;
+  --color-background-light: #f8fafc;
+  --color-border: #dfe3e8;
+  --font-family-main: "Inter", sans-serif;
+  --font-family-heading: "Sora", sans-serif;
 }
 
 body {
@@ -156,4 +168,11 @@ button {
   cursor: pointer;
   padding: 0;
   font-family: inherit;
+}
+
+/* Additional styles from rewards-global.css */
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
 }

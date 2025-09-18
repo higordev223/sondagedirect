@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rewards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="sections.css" />
+    <script src="global.js" defer></script>
+  </head>
+  <body>
+    <header id="section-header" class="site-header">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+      >
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <img
+              src="images/3543bf97c94098d852b12a5df3cbdf3c7d0040ca.png"
+              alt="Sondage Direct Logo"
+              height="31"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#section-rewards"
+                  >Rewards</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="survey.html">Surveys</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a href="login.html" class="btn btn-primary">
+                <img src="images/I4_99_4_465.svg" alt="" class="btn-icon" />
+                Sign in
+              </a>
+              <a href="signup.html" class="btn btn-outline-primary">
+                <img src="images/I4_99_4_490.svg" alt="" class="btn-icon" />
+                Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="rewards" class="rewards-page-section">
+      <div class="container-fluid rewards-page-container">
+        <div class="rewards-page-header">
+          <div class="rewards-page-title">
+            <h1>Rewards</h1>
+            <p>Click on exchange to exchange your points for rewards.</p>
+          </div>
+          <div class="balance-display">
+            <p>Your Balance Points : <span class="balance-amount">25</span></p>
+          </div>
+        </div>
+
+        <div class="card rewards-table-container">
+          <div class="table-responsive">
+            <table class="table table-hover rewards-table">
+              <thead class="table-light">
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                  <th>Points Cost</th>
+                  <th class="text-end">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>EMAG - Gift Card</td>
+                  <td>100 LEI</td>
+                  <td>370</td>
+                  <td class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary btn-sm btn-exchange"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exchangeModal"
+                    >
+                      Exchange
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>IKEA - Gift Card</td>
+                  <td>100 LEI</td>
+                  <td>370</td>
+                  <td class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary btn-sm btn-exchange"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exchangeModal"
+                    >
+                      Exchange
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Playstation - Gift Card</td>
+                  <td>100 LEI</td>
+                  <td>370</td>
+                  <td class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary btn-sm btn-exchange"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exchangeModal"
+                    >
+                      Exchange
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Playstation - Declaton</td>
+                  <td>100 LEI</td>
+                  <td>370</td>
+                  <td class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary btn-sm btn-exchange"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exchangeModal"
+                    >
+                      Exchange
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>H&M</td>
+                  <td>75 LEI</td>
+                  <td>370</td>
+                  <td class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary btn-sm btn-exchange"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exchangeModal"
+                    >
+                      Exchange
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="section-footer" class="site-footer">
+      <div class="container footer-container">
+        <p class="copyright">
+          ©2025 Sondage Direct. Sondage Direct is a brand by Main Frame Ltd
+        </p>
+        <div class="footer-links">
+          <a href="terms_conditions.html">Terms and conditions</a>
+          -
+          <a href="privacy_police.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Exchange Confirmation Modal -->
+    <div
+      class="modal fade"
+      id="exchangeModal"
+      tabindex="-1"
+      aria-labelledby="exchangeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title-container">
+              <div class="modal-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="9"
+                    stroke="#6B7280"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M6 10L9 13L14 7"
+                    stroke="#6B7280"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h5 class="modal-title" id="exchangeModalLabel">Confirmation</h5>
+            </div>
+            <button
+              type="button"
+              class="btn-close d-flex justify-content-center align-items-center"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.49331 0.286621L4.95747 3.82162L1.42247 0.286621L0.244141 1.46495L3.77914 4.99995L0.244141 8.53496L1.42247 9.71329L4.95747 6.17829L8.49331 9.71329L9.67164 8.53496L6.13664 4.99995L9.67164 1.46495L8.49331 0.286621Z"
+                  fill="#395164"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Do you confirm that you would like to exchange your points for
+              rewards?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmExchange">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="global.js" defer></script>
+
+    <!-- Exchange Modal JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const confirmBtn = document.getElementById("confirmExchange");
+        const exchangeModal = document.getElementById("exchangeModal");
+
+        if (confirmBtn && exchangeModal) {
+          confirmBtn.addEventListener("click", function () {
+            // Here you can add the actual exchange logic
+            console.log("Exchange confirmed!");
+
+            // Close the modal
+            const modal = bootstrap.Modal.getInstance(exchangeModal);
+            if (modal) {
+              modal.hide();
+            }
+
+            // You can add success message or redirect here
+            alert("Exchange request submitted successfully!");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
