@@ -1736,9 +1736,9 @@ body.login-page {
 .survey-page .card-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 /* Form control styling for personal info card */
@@ -2213,6 +2213,118 @@ body.login-page {
 .no-surveys-content {
   padding-top: 44px;
   padding-bottom: 44px;
+}
+
+/* Survey Unsubscribe Page Styles - Bootstrap 5 Compatible */
+.survey-page #delete-profile {
+  background-color: var(--background-light);
+  min-height: calc(100vh - 88px - 88.5px);
+}
+
+.survey-page #delete-profile .container {
+  max-width: 910px;
+}
+
+.delete-profile-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.survey-page #delete-profile .card {
+  border: none;
+  border-radius: 16px;
+}
+
+.survey-page #delete-profile .card-title {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.survey-page #delete-profile .alert {
+  border-radius: 8px;
+  border: none;
+  font-family: var(--font-family-main);
+  margin-bottom: 30px;
+}
+
+.survey-page #delete-profile .btn {
+  font-family: var(--font-family-main);
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  white-space: nowrap;
+}
+
+.survey-page #delete-profile .btn-danger {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.survey-page #delete-profile .btn-danger:hover {
+  background-color: #b91c1c;
+  border-color: #b91c1c;
+}
+
+.survey-page #delete-profile .btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.survey-page #delete-profile .btn-primary:hover {
+  background-color: #044a70;
+  border-color: #044a70;
+}
+
+/* Responsive styles for survey unsubscribe page */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .survey-page #delete-profile .btn {
+    width: 423px;
+    flex: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .survey-page #delete-profile {
+    padding: 2rem 0 !important;
+  }
+
+  .survey-page #delete-profile .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .survey-page #delete-profile .card-title {
+    font-size: 1.5rem;
+  }
+
+  .survey-page #delete-profile .alert {
+    font-size: 0.875rem;
+  }
+
+  .survey-page #delete-profile .btn {
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    flex: 1;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .survey-page #delete-profile .d-flex {
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .survey-page #delete-profile .btn {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.75rem;
+    line-height: 1.2;
+  }
 }
 
 .no-surveys-title {
