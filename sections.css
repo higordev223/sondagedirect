@@ -2250,6 +2250,10 @@ body.login-page {
   margin-bottom: 30px;
 }
 
+.survey-page #delete-profile .alert-warning {
+  font-weight: 400;
+}
+
 .survey-page #delete-profile .btn {
   font-family: var(--font-family-main);
   font-weight: 500;
@@ -2616,20 +2620,6 @@ body.login-page {
   font-weight: 600;
   font-size: 24px;
   line-height: 30.24px;
-}
-.unsubscribe-delete .warning-banner {
-  background-color: #fff0f0;
-  padding: 20px;
-  width: 100%;
-}
-.unsubscribe-delete .warning-text {
-  margin: 0;
-  color: #8b0505;
-  font-family: "Sora", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20.16px;
-  text-align: center;
 }
 .unsubscribe-delete .delete-profile-form {
   display: flex;
