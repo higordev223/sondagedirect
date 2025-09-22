@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/3543bf97c94098d852b12a5df3cbdf3c7d0040ca.png"
+    />
+    <title>My Account - Sondage Direct</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="sections.css" />
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="global.js" defer></script>
+  </head>
+  <body class="survey-page">
+    <header id="section-header" class="site-header">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+      >
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <img
+              src="images/3543bf97c94098d852b12a5df3cbdf3c7d0040ca.png"
+              alt="Sondage Direct Logo"
+              height="31"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="rewards.html">Rewards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="survey.html">Surveys</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a href="login.html" class="btn btn-primary">
+                <img src="images/I4_99_4_465.svg" alt="" class="btn-icon" />
+                Sign in
+              </a>
+              <a href="signup.html" class="btn btn-outline-primary">
+                <img src="images/I4_99_4_490.svg" alt="" class="btn-icon" />
+                Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="unsubscribe-delete" class="py-5 unsubscribe-delete">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="delete-profile-container">
+              <div class="delete-profile-header">
+                <h1 class="title">Delete Profile</h1>
+                <div class="warning-banner">
+                  <p class="warning-text">
+                    To continue the unsubscribe process, enter your password in the field below.
+                  </p>
+                </div>
+              </div>
+              <form class="delete-profile-form">
+                <div class="form-field mb-0">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" id="password" class="form-control" name="password" />
+                </div>
+                <div class="button-group">
+                  <a href="survey.html" class="btn btn-cancel-delete">Cancel</a>
+                  <button type="submit" class="btn btn-unsubscribe-delete">Unsubscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap gap-3"
+        >
+          <p class="copyright mb-0">
+            ©2025 Sondage Direct. Sondage Direct is a brand by Main Frame Ltd
+          </p>
+          <nav class="footer-links">
+            <a href="#" class="text-decoration-none">Terms and conditions</a> -
+            <a href="#" class="text-decoration-none">Privacy Policy</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
