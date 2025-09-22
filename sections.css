@@ -2596,7 +2596,6 @@ body.login-page {
   background-color: #ffffff;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 732px;
   width: 100%;
   display: flex;
@@ -2696,4 +2695,14 @@ body.login-page {
   .unsubscribe-delete .button-group {
     flex-direction: column;
   }
+}
+
+.survey-page .unsubscribe-delete {
+  min-height: calc(100vh - 176.5px);
+  display: flex;
+  align-items: center;
+}
+.unsubscribe-delete .delete-profile-container {
+  margin-left: auto;
+  margin-right: auto;
 }
