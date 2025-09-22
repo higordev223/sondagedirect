@@ -1767,6 +1767,12 @@ body.login-page {
   border-radius: 6px;
 }
 
+.survey-page .personal-info-card .save-button-wrapper {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+}
+
 .survey-page .redeem-banner {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -2556,13 +2562,31 @@ body.login-page {
 }
 
 .btn-unsubscribe {
-  color: #B01717 !important;
-  border-color: #B01717 !important;
+  color: #b01717 !important;
+  border-color: #b01717 !important;
   background-color: transparent;
 }
 .btn-unsubscribe:hover,
 .btn-unsubscribe:focus {
   color: #ffffff !important;
-  background-color: #B01717 !important;
-  border-color: #B01717 !important;
+  background-color: #b01717 !important;
+  border-color: #b01717 !important;
+}
+
+@media (max-width: 768px) {
+  .survey-page .personal-info-card .card-body {
+    padding-bottom: 24px;
+  }
+  .survey-page .personal-info-card .save-button-wrapper {
+    position: static;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .survey-page .personal-info-card .save-button-wrapper .btn {
+    width: 100%;
+  }
 }
