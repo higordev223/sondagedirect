@@ -27,52 +27,52 @@
     <script src="global.js" defer></script>
   </head>
   <body class="survey-page">
-    <nav class="navbar navbar-expand-lg site-header">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="images/3543bf97c94098d852b12a5df3cbdf3c7d0040ca.png"
-            alt="Sondage Direct Logo"
-            class="logo-img"
-          />
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="rewards.html">Rewards</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="survey.html">Surveys</a>
-            </li>
-          </ul>
-          <div class="d-flex align-items-center">
+    <header id="section-header" class="site-header">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+      >
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
             <img
-              src="images/I45_436_118_635.svg"
-              alt="Account Icon"
-              class="account-icon me-2"
+              src="images/3543bf97c94098d852b12a5df3cbdf3c7d0040ca.png"
+              alt="Sondage Direct Logo"
+              height="31"
             />
-            <img
-              src="images/I45_436_118_805.svg"
-              alt="Dropdown Arrow"
-              class="dropdown-arrow"
-            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="rewards.html">Rewards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="survey.html">Surveys</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a href="login.html" class="btn btn-primary">
+                <img src="images/I4_99_4_465.svg" alt="" class="btn-icon" />
+                Sign in
+              </a>
+              <a href="signup.html" class="btn btn-outline-primary">
+                <img src="images/I4_99_4_490.svg" alt="" class="btn-icon" />
+                Sign Up
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <section id="account-section" class="account-section">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -151,9 +151,14 @@
                     </div>
                   </div>
                   <div class="d-flex justify-content-end mt-4">
-                    <button type="submit" class="btn btn-outline-primary">
-                      Save
-                    </button>
+                    <div class="d-flex gap-2">
+                      <button type="button" class="btn btn-outline-primary">
+                        Unsubscribe
+                      </button>
+                      <button type="submit" class="btn btn-outline-primary">
+                        Save
+                      </button>
+                    </div>
                   </div>
                 </form>
               </div>
