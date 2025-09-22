@@ -2554,3 +2554,15 @@ body.login-page {
     padding: 24px 16px;
   }
 }
+
+.btn-unsubscribe {
+  color: #B01717 !important;
+  border-color: #B01717 !important;
+  background-color: transparent;
+}
+.btn-unsubscribe:hover,
+.btn-unsubscribe:focus {
+  color: #ffffff !important;
+  background-color: #B01717 !important;
+  border-color: #B01717 !important;
+}
