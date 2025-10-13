@@ -2704,3 +2704,98 @@ body.login-page {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* =============================================
+   Survey Complete Page Styles (survey-complete.html)
+   ============================================= */
+.survey-complete-section {
+  padding: 0;
+}
+
+.survey-complete-row {
+  min-height: calc(100vh - 176.5px);
+}
+
+.survey-complete-content {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.survey-complete-image {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+}
+.survey-complete-message {
+  margin-top: 64px;
+}
+.survey-complete-title {
+  color: #333333;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.survey-complete-description {
+  color: #64748b;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.survey-complete-actions {
+  margin-top: 30px;
+}
+
+.survey-complete-actions .btn {
+  border-radius: 7px;
+  height: 48px;
+  width: 332px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #055b8c;
+  border-color: #055b8c;
+}
+
+@media (max-width: 768px) {
+  .survey-complete-content {
+    padding: 2rem 0;
+  }
+
+  .survey-complete-title {
+    font-size: 24px;
+  }
+
+  .survey-complete-description {
+    font-size: 14px;
+  }
+
+  .survey-complete-image {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .survey-complete-actions {
+    width: 100%;
+  }
+
+  .survey-complete-actions .btn {
+    width: 100%;
+    max-width: none;
+  }
+}
