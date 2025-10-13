@@ -2707,16 +2707,20 @@ body.login-page {
 
 /* =============================================
    Survey Complete Page Styles (survey-complete.html)
+   Survey Unqualify Page Styles (survey-unqualify.html)
    ============================================= */
-.survey-complete-section {
+.survey-complete-section,
+.survey-unqualify-section {
   padding: 0;
 }
 
-.survey-complete-row {
+.survey-complete-row,
+.survey-unqualify-row {
   min-height: calc(100vh - 176.5px);
 }
 
-.survey-complete-content {
+.survey-complete-content,
+.survey-unqualify-content {
   max-width: 600px;
   width: 100%;
   display: flex;
@@ -2725,7 +2729,8 @@ body.login-page {
   padding: 2.5rem 0;
 }
 
-.survey-complete-image {
+.survey-complete-image,
+.survey-unqualify-image {
   max-width: 400px;
   width: 100%;
   height: auto;
@@ -2733,10 +2738,12 @@ body.login-page {
   display: block;
   border-radius: 12px;
 }
-.survey-complete-message {
+.survey-complete-message,
+.survey-unqualify-message {
   margin-top: 64px;
 }
-.survey-complete-title {
+.survey-complete-title,
+.survey-unqualify-title {
   color: #333333;
   font-family: "Sora", sans-serif;
   font-weight: 600;
@@ -2745,7 +2752,8 @@ body.login-page {
   margin: 0;
 }
 
-.survey-complete-description {
+.survey-complete-description,
+.survey-unqualify-description {
   color: #64748b;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -2755,11 +2763,13 @@ body.login-page {
   margin-top: 12px;
 }
 
-.survey-complete-actions {
+.survey-complete-actions,
+.survey-unqualify-actions {
   margin-top: 30px;
 }
 
-.survey-complete-actions .btn {
+.survey-complete-actions .btn,
+.survey-unqualify-actions .btn {
   border-radius: 7px;
   height: 48px;
   width: 332px;
@@ -2772,29 +2782,35 @@ body.login-page {
 }
 
 @media (max-width: 768px) {
-  .survey-complete-content {
+  .survey-complete-content,
+  .survey-unqualify-content {
     padding: 2rem 0;
   }
 
-  .survey-complete-title {
+  .survey-complete-title,
+  .survey-unqualify-title {
     font-size: 24px;
   }
 
-  .survey-complete-description {
+  .survey-complete-description,
+  .survey-unqualify-description {
     font-size: 14px;
   }
 
-  .survey-complete-image {
+  .survey-complete-image,
+  .survey-unqualify-image {
     max-width: 280px;
   }
 }
 
 @media (max-width: 480px) {
-  .survey-complete-actions {
+  .survey-complete-actions,
+  .survey-unqualify-actions {
     width: 100%;
   }
 
-  .survey-complete-actions .btn {
+  .survey-complete-actions .btn,
+  .survey-unqualify-actions .btn {
     width: 100%;
     max-width: none;
   }
